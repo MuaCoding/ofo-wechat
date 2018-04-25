@@ -52,8 +52,54 @@ Page({
               },
               clickable: true
             },
+            {
+              id: 3,
+              iconPath: '/images/warn.png',
+              position: {
+                left: res.windowWidth- 70,
+                top: res.windowHeight - 80,
+                width: 50,
+                height: 50
+              },
+              clickable: true
+            },
+            {
+              id: 4,
+              iconPath: '/images/marker.png',
+              position: {
+                left: res.windowWidth/2- 13,
+                top: res.windowHeight/2 - 40,
+                width: 25,
+                height: 40
+              },
+              clickable: true
+            },
+            {
+              id: 5,
+              iconPath: '/images/avatar.png',
+              position: {
+                left: res.windowWidth- 68,
+                top: res.windowHeight - 155,
+                width: 45,
+                height: 45
+              },
+              clickable: true
+            },
           ]
         })
+      }
+    });
+
+    // 4.请求服务器，显示附近的单车，用marker标记
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/59098d007a878d73716e966f/ofodata/biyclePosition',
+      data: {},
+      method: 'GET',
+      success: (res) =>{
+        console.log(res)
+        this.setData({
+          markers: res.data.data
+        });
       }
     });
   },
@@ -62,6 +108,10 @@ Page({
     // 1.创建地图上下文，移动当前位置到地图中心
     this.mapCtx = wx.createMapContext('ofoMap');
     this.movetoPosition();
+  },
+  // 地图控件点击事件
+  bindcontroltap: function(e){
+    
   },
   // 定位函数，移动位置到地图中心
   movetoPosition: function(){
