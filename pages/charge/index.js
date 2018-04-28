@@ -16,7 +16,7 @@ Page({
     wx.getLocation({
       type:"gcj02",  //坐标系类型 （GCJ02（火星坐标）比WGS84（GPS）的坐标在计算距离的时候更为精确）
       success: (res) =>{
-        // console.log(res);
+        console.log(res);
         this.setData({
           longitude: res.longitude,
           latitude: res.latitude
@@ -96,7 +96,7 @@ Page({
       method: 'GET',
       // header: {}, // 设置请求的 header
       success: (res) =>{
-        // console.log(res)
+        console.log(res)
         this.setData({
           markers: res.data.data
         });
@@ -174,7 +174,7 @@ Page({
   },
   // 地图视野改变事件
   bindregionchange: function(e){
-    // console.log(e)
+    console.log(e)
     // 拖动地图，获取附件单车位置
     if(e.type == "begin"){
       wx.request({
@@ -182,7 +182,7 @@ Page({
         data: {},
         method: 'GET',
         success: (res) => {
-          // console.log(res)
+          console.log(res)
           this.setData({
             _markers: res.data.data
           })
@@ -198,7 +198,7 @@ Page({
   },
   // 地图标记点击事件，连接用户位置和点击的单车位置
   bindmarkertap: function(e){
-    // console.log(e);
+    console.log(e);
     let _markers = this.data.markers;
     let markerId = e.markerId;
     let currMaker = _markers[markerId];

@@ -113,6 +113,7 @@ Page({
   },
   // 地图控件点击事件
   bindcontroltap: function(e){
+    // console.log(e)
     // 判断点击的是哪个控件 e.controlId代表控件的id，在页面加载时的第3步设置的id
     switch(e.controlId){
       // 点击定位控件

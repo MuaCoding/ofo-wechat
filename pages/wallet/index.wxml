@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="overage">
+  	<view>
+  		<text class="overage-header">我的余额（元）</text>
+  	</view>
+  	<view>
+  		<text class="overage-amount">0</text>
+  	</view>
+  	<view>
+  		<text class="overage-desc">余额说明</text>
+  	</view>
+  </view>
+  <button>充值</button>
+  <view class="tapbar">
+  	<text>我的用车券</text>
+  	<text><text class="">张</text></text>
+  </view>
+  <view class="">
+  	<text>我的押金</text>
+  </view>
+</view>

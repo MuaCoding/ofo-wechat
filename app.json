@@ -1,8 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/user/index",
+    "pages/wallet/index",
     "pages/logs/logs"
-    
   ],
   "window":{
     "backgroundTextStyle":"light",
