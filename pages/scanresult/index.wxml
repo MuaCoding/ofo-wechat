@@ -1,5 +1,16 @@
 <!--index.wxml-->
 <view class="container">
-  <map id="ofoMap" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" bindregionchange="bindregionchange" polyline="{{polyline}}" markers="{{markers}}" controls="{{controls}}" bindcontroltap="bindcontroltap"
-  bindmarkertap="bindmarkertap" show-location></map>  
+  <view class="pwd-title">
+  	<text>开锁密码</text>
+  </view>
+  <view class="pwd-content">
+  	<text>{{password}}</text>
+  </view>
+  <view class="tips">
+  	<text>请使用密码解锁，{{time}}s后开始计费</text>
+  	<view class="tips-action">
+  		车辆有问题?
+  		<text class="tips-href">回首页去车辆报障</text>
+  	</view>
+  </view>
 </view>

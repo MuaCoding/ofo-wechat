@@ -9,7 +9,7 @@
   <block wx:if="{{userInfo.avatarUrl != ''}}">
   	<view class="tapbar" bindtap="movetoWallet">
   		<text>我的钱包</text>
-  		<text></text>
+  		<text>></text>
   	</view>
   </block>
   <button bindtap="bindAction" class="btn-login" type="{{bType}}">

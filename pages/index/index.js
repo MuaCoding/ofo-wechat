@@ -138,7 +138,8 @@ Page({
                   // 请求密码成功隐藏等待框
                   wx.hideLoading();
                   // 携带密码和车号跳转到密码页
-                  wx.rediirectTo({
+                  console.log(res)
+                  wx.redirectTo({
                     url: '../scanresult/index?password=' + res.data.data.password + '&number=' + res.data.data.number,
                     success: function(res){
                       wx.showToast({
@@ -153,6 +154,7 @@ Page({
           })
         }
         else{
+          console.log('back')
           wx.navigateBack({
             delta: 1
           })

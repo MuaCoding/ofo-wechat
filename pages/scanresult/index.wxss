@@ -1,16 +1,36 @@
 /**index.wxss**/
 .container{
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	width: 100%;
-	height:100vh;
+	background-color: #fff;
 }
 
-#ofoMap{
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
+.pwd-title,.tips{
 	width: 100%;
-	height: 100%;
-	z-index: 1;
+	flex: 1;
+	text-align: center;
+	padding: 60rpx 0;
+}
+
+.pwd-content{
+	flex: 8;
+	width: 100%;
+	text-align: center;
+	font-size: 240rpx;
+	font-weight: 900;
+}
+
+.tips{
+	font-size: 32rpx;
+}
+
+.tips .tips-action{
+	margin-top: 20rpx;
+}
+
+.tips .tips-href {
+	color: #b9dd08
 }

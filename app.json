@@ -3,6 +3,9 @@
     "pages/index/index",
     "pages/user/index",
     "pages/wallet/index",
+    "pages/charge/index",
+    "pages/scanresult/index",
+    "pages/billing/index",
     "pages/logs/logs"
   ],
   "window":{

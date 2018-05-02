@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <map id="ofoMap" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" bindregionchange="bindregionchange" polyline="{{polyline}}" markers="{{markers}}" controls="{{controls}}" bindcontroltap="bindcontroltap"
-  bindmarkertap="bindmarkertap" show-location></map>  
+  <view class="title">请输入充值金额</view>
+  <view class="input-box">
+  	<input bindinput="bindInput" />
+  </view>
+  <button bind:tap="charge" class="btn-charge">充值</button>
 </view>
