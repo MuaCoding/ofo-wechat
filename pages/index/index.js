@@ -154,24 +154,29 @@ Page({
           })
         }
         else{
-          console.log('back')
           wx.navigateBack({
             delta: 1
           })
         }
         break;
         // 
-        case 3: 
-          wx.navigateTo({
-            url: '../warn/index'
-          });
-          break;
-        case 5: 
-          wx.navigateTo({
-            url: '../user/index'
-          })
-          break;
-        default: break;
+      case 3: 
+        wx.navigateTo({
+          url: '../warn/index',
+          success: function (res) {
+            console.log(res)
+          },
+          fail:function(res){
+            console.log(res)
+          }
+        });
+        break;
+      case 5: 
+        wx.navigateTo({
+          url: '../user/index'
+        })
+        break;
+      default: break;
     }
   },
   // 地图视野改变事件

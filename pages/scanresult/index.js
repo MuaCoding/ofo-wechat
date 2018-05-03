@@ -14,7 +14,7 @@ Page({
     // 设置初始计时秒数
     let time = 9;
     // 开始定时器
-    this.timer = setIntarval(() =>{
+    this.timer = setInterval(() =>{
       this.setData({
         time: --time
       });

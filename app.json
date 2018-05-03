@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/user/index",
+    "pages/warn/index",
     "pages/wallet/index",
     "pages/charge/index",
     "pages/scanresult/index",
